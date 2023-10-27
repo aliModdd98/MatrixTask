@@ -61,7 +61,7 @@
 }
 @media(max-width:950px){
     .teamContainer{
-        height: 190vh;
+        height: 210vh;
     }
     .cardsTeam{
         margin: 0 auto;
@@ -82,7 +82,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 }
-@media (max-width:460px){
+@media (max-width:450px){
     .teamContainer{
        height:350vh;
     }
@@ -103,5 +103,6 @@
     overflow: hidden;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 }

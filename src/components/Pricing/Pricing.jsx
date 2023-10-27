@@ -61,15 +61,15 @@ function Pricing() {
 
   }
     return (
-    <div className='pricingContainer'>
-        <Title title="PRICING" desc="Sit sint consectetur velit nemo qui impedit suscipit alias ea"/>
+    <div className='pricingContainer' id='pricing'>
+           <Title title="PRICING" desc="Sit sint consectetur velit nemo qui impedit suscipit alias ea"/>
       
       
-<div className="Pricingcards">
+             <div className="Pricingcards">
          
-{pricing.map((price)=>(
+                {pricing.map((price)=>(
   
-  <div key={price.id} className="cardPricing" style={price.id === 2 ? secondObjectStyle : null}>                   
+                    <div key={price.id} className="cardPricing" style={price.id === 2 ? secondObjectStyle : null}>                   
                      
               <div className="Pricingtype">
               <div className="typeP">{price.type}</div>

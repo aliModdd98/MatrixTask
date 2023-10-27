@@ -13,7 +13,10 @@ import p6 from './../../assets/portfolio-6.jpg'
 import p7 from './../../assets/portfolio-7.jpg'
 import p8 from './../../assets/portfolio-8.jpg'
 import p9 from './../../assets/portfolio-9.jpg'
+import 'aos/dist/aos.css';
+import useAOS from '../../hooks/useAOS.JSX'
 function PortFolio() {
+  useAOS()
   const types = ['All','App', 'Card', 'Web'];
   const [selectedType, setSelectedType] = useState('All');
   const portfolio=[
@@ -121,7 +124,7 @@ function PortFolio() {
     </div>
     <div className='cardsP'>
         {filteredCards.map(card => (
-          <div key={card.id} className='cardP'>
+          <div key={card.id} className='cardP' data-aos="fade-up" data-aos-delay="500">
            <img src={card.imgPorto} alt="portfolio" />
            <div className='infoP'>
             <h3>{card.name}</h3>

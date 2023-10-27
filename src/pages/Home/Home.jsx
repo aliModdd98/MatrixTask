@@ -18,7 +18,7 @@ function HomeP() {
 <Features />
 <TestMonails />
 <PortFolio/>
-<Team />
+<Team/>
 <Pricing/>
 <Contact/>
     </>

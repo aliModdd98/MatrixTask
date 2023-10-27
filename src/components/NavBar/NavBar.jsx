@@ -1,63 +1,69 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
-import './NavBarStyle.css'
-import {FaBars} from 'react-icons/fa'
-import {IoMdClose}from 'react-icons/io'
-import Dropdowng from '../DropDown/DropDown';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import './NavBarStyle.css';
+import { FaBars } from 'react-icons/fa';
+import { IoMdClose } from 'react-icons/io';
+import Dropdown from '../DropDown/DropDown';
 import NestedDropdown from '../DropDown/DropDown';
 
-function NavBar() {
-  const [mobileMode,setmobileMode]=useState(false);
 
+const sections = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'servises', label: 'Servises' },
+  { id: 'portfolio', label: 'Portfolio' },
+  { id: 'team', label: 'Team' },
+  { id: 'pricing', label: 'Pricing' },
+  { id: 'contact', label: 'Contact' },
+];
+
+function NavBar() {
+  const [mobileMode, setMobileMode] = useState(false);
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
-   <nav className="navbar">
-    <div className="containerNav">
-    <h3 className="logo">Vesperr</h3>
-    <ul className= {mobileMode? 'small-size':'nav-links'} onClick={()=>setmobileMode(false)}>
-    <NavLink to="/home" style={{ animationDelay: '0.1s' }}>
-              <li>Home</li>
-            </NavLink>
-            <NavLink to="/about" style={{ animationDelay: '0.2s' }}>
-              <li>About</li>
-            </NavLink>
-            <Link to="/servises" style={{ animationDelay: '0.3s' }}>
-              <li>Services</li>
-            </Link>
-            <Link to="/portfolio" style={{ animationDelay: '0.2s' }}>
-              <li>Portfolio</li>
-            </Link>
-            <Link to="/team" style={{ animationDelay: '0.5s' }}>
-              <li>Team</li>
-            </Link>
-            <Link to="/pricing" style={{ animationDelay: '0.2s' }}>
-              <li>Pricing</li>
-            </Link>
-            <Link to="/dropdown" style={{ animationDelay: '0.2s' }}>
-              <li ><NestedDropdown/></li>
-            </Link>
-            <Link to="/contact" style={{ animationDelay: '0.2s' }}>
-              <li>Contact</li>
-               </Link>
-               <Link to="/about" >
-                <div className="btn"><button>Get Started</button></div>
-            </Link>
-            
-    </ul>
-    <button className='small-size-mobile' onClick={()=>setmobileMode(!mobileMode)}>{mobileMode? <IoMdClose/>:<FaBars/>}</button>
-    
+    <nav className="navbar">
+      <div className="containerNav">
+        <h3 className="logo" onClick={scrollToTop}>
+          Vesperr
+        </h3>
+        <ul className={mobileMode ? 'small-size' : 'nav-links'} onClick={() => setMobileMode(false)}>
+          {sections.map((section) => (
+            <ScrollLink
+              key={section.id}
+              to={section.id}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-60}
+              style={{ animationDelay: '0.1s' }}
+              activeClass="activeBtn"
+            >
+              <li>{section.label}</li>
+            </ScrollLink>
+          ))}
+          <Link to="/dropdown" style={{ animationDelay: '0.2s' }}>
+            <li>
+              <NestedDropdown />
+            </li>
+          </Link>
+          <Link to="/about">
+            <div className="btn">
+              <button>Get Started</button>
             </div>
-   </nav>
-  )
+          </Link>
+        </ul>
+        <button className="small-size-mobile" onClick={() => setMobileMode(!mobileMode)}>
+          {mobileMode ? <IoMdClose /> : <FaBars />}
+        </button>
+      </div>
+    </nav>
+  );
 }
 
-export default NavBar
- 
-{/* <div className='navbarStyle'>
-        <div className="logo"><span>Vesperr</span></div>
-       
-        <div className="sectionsNav">
-       
-         
-        </div>
-    </div> */}
+export default NavBar;

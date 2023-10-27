@@ -23,6 +23,10 @@ li{
 button{
   border: none;
 }
+.activeBtn{
+  background-color: #fff;
+  color: var(--hover);
+}
 .containerNav{
   max-width: 90%;
   margin: auto;

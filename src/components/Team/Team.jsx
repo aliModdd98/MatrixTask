@@ -6,13 +6,15 @@ import team2 from './../../assets/team-2.jpg'
 import team3 from './../../assets/team-3.jpg'
 import team4 from './../../assets/team-4.jpg'
 
+import 'aos/dist/aos.css';
+import useAOS from '../../hooks/useAOS.JSX'
 import {BiLogoFacebookCircle} from 'react-icons/bi'
 import {AiFillTwitterCircle} from 'react-icons/ai'
 import {AiFillInstagram} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 
 function Team() {
-  
+    useAOS()
   const Team=[
     {   id:1,
         name:"Walter White",
@@ -53,13 +55,13 @@ function Team() {
    
    
    
-   <div className='teamContainer'>
+   <div className='teamContainer' id='team'>
   <Title title="TEAM" desc="Necessitatibus eius consequatur ex aliquid fuga eum quidem"/>
       <div className="cardsTeam">
 {
     Team.map((e)=>(
         <div key={e.id}
-            className="cardT">
+            className="cardT" data-aos="zoom-out-up" data-aos-delay="700">
             <div className="imgT">
                 <img src={e.image} alt="img" />
                 <div className="socials">
