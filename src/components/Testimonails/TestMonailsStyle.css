@@ -1,0 +1,167 @@
+.testContainer{
+    height: 80vh;
+    width: 100%;
+}
+
+/* .testCard{
+    width: 45%;
+    border: 1px solid black;
+    height: 40%;
+    margin: 45px auto;
+    position: relative;
+    text-align: start;
+    padding-left:55px ;
+    padding-top: 10px ;
+    border-radius: 12px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.236);
+
+}
+.testCard h2{
+    color: black;
+}
+
+.job{
+    font-size: 18px;
+}
+.descTest{
+    font-size: 14px;
+}
+.imgTest{
+    position: absolute;
+    top: 20px;
+    left: -45px;
+    border: 1px solid black;
+   
+
+}
+.imgTest img{
+    margin: 2px auto;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  } */
+  .TestBox {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+  }
+  
+  .cursal {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 90%;
+    height: 70%;
+    margin-top: 10%;
+  }
+  
+  .testCard {
+    flex: 0 0 calc(50% - 10px);
+    padding: 20px;
+  }
+  
+  .testCard {
+    width: 40%;
+    margin: 0 auto;
+    height:100%;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    text-align: start; 
+    padding-left: 60px;   
+
+  }
+  
+  /* Add more styles for other elements inside the carousel card */
+  .testCard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  
+  .testCard .job {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .testCard .descTest {
+    font-size: 14px;
+    margin-bottom: 10px;
+   
+  }
+  
+ 
+  .imgTest{
+    position: absolute;
+    top: 20px;
+    left: -45px;
+    border: 1px solid black;
+   
+
+}
+.imgTest img{
+    margin: 2px auto;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+
+  /* Carousel navigation circles/points */
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+  }
+  
+  .carousel-nav button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-nav button.active {
+    background-color: var(--primary-color);
+  }
+  
+  @media (max-width:1000px){
+    .TestBox .cursal{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 55%;
+      margin: 0 auto;
+      margin-top: 5%;
+      
+    }
+    .testCard{
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 3%;
+      width: 84%;
+      height: 90%;
+
+    }
+  }
+  @media (max-width:550px) {
+    .testContainer{
+      height: 120vh;
+    }
+  }

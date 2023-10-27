@@ -1,0 +1,10 @@
+#root {
+  max-width: 1450px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+.MainPage{
+  width: 100%;
+  margin: 0 auto;
+}

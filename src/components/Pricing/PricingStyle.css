@@ -1,0 +1,109 @@
+
+.pricingContainer{
+    height: 100vh;
+    width: 100%;
+}
+.Pricingcards{
+    margin-top: 18%;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(190px,1fr));
+    gap:20px;
+   margin: 0 auto;
+   width: 90%;
+   height: 60%;
+}
+.cardPricing{
+    margin-top: 8%;
+    border: 1px solid var(--gray);
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnw{
+    background-color: var(--gray);
+    color: white;
+    width:150px;
+    margin:29px;
+    border-radius:25px;
+}
+.btnw:hover{
+    background-color: var(--hover);
+    color: white ;
+}
+.Pricingtype{
+    margin-top:4% ;
+}
+.typeP {
+    font-weight: bold;
+    font-size: 19px;
+}
+.pr{
+    color: var(--hover);
+    font-weight: bold;
+    font-size: 30px;
+}
+.servPricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    
+}
+.priceRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.iconn{
+    color: var(--hover);
+    width: 25px;
+    height: 25px;
+}
+.servPricing span{
+   padding-top: 15px;
+}
+@media (max-width:700px) {
+    .pricingContainer{
+        height: 190vh;
+       
+    }
+    .Pricingcards{
+        margin-top: 8%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(190px,1fr));
+        gap:20px;
+        height: 80%;
+      
+    }
+}
+@media (max-width:450px) {
+    .pricingContainer {
+        width: 100%;
+        height: auto;  
+        overflow-x: hidden; 
+         height: 230vh;
+        white-space: nowrap; 
+        flex-wrap: nowrap;  
+    }
+      .Pricingcards {
+        margin-top: 25%;
+        display: grid;
+        height: 70%;
+        width: 80%;
+        grid-template-columns: repeat(1, minmax(120px, 1fr));
+        margin: 0 auto;
+      }
+      .cardPricing {
+        display: flex;
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+      }
+}

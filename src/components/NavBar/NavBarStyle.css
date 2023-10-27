@@ -1,0 +1,166 @@
+
+
+
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-links li:hover {
+  color: var(--hover);
+}
+.navbar{
+  line-height: 10vh;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  
+}
+button{
+  border: none;
+}
+.containerNav{
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  font-size: 32px;
+  color: black;
+}
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  padding-right: 25px;
+}
+.drop{
+  width: 100%;
+}
+
+.nav-links li{
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: none;
+  padding: 0 7px;
+ margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-links Link{
+  text-decoration: none;
+}
+.btn button {
+  width: 110px;
+  padding: 0 10px;
+  height: 45px;
+  background-color:var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+.small-size-mobile
+{
+  display: none;
+}
+
+
+@media (max-width:1100px) {
+
+  .nav-links{
+    display: none;
+  }
+  .small-size{
+    position: absolute;
+    display: block;
+    list-style: none;
+    top: 10%;
+    left: 0;
+    z-index: 1231;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  ul li{
+    
+    width: 100%;
+    height: 50px;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .small-size-mobile{
+    position: absolute;
+    display: block;
+    right: 20px;
+
+  }
+  .btn button{
+    margin-top: 15px;
+  }
+}
+
+
+
+
+/* .navbarStyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+  
+    
+  }
+  
+  .navbarStyle .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 25px auto;   
+    margin-right: 100px;
+
+  }
+  
+  .navbarStyle .sectionsNav {
+    display: flex;
+    align-items: center;
+
+
+  }
+  
+  .navbarStyle .sectionsNav a {
+    margin-right: 20px;
+    
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+  }
+  
+  .navbarStyle .sectionsNav a:
+  
+  .navbarStyle .btn 
+  
+  .navbarStyle .btn button:hover {
+    background-color: #222222;
+  } */

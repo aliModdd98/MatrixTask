@@ -1,0 +1,215 @@
+.containerServises{
+    height: 200vh;
+    margin-top: 12%;
+}
+.servisesGrid{
+    margin: 0 auto;
+    margin-top: 5%;
+    display: grid;
+    width: 90%;
+    height: 20%;
+    grid-template-columns: repeat(4,minmax(200px, 350px));
+    text-align: start;
+    gap: 20px;
+    
+}
+.serviseGrid{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    position: relative;
+    transition: background-color 1s;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+.serviseGrid h3{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.serviseGrid .descServises{
+   font-size: 14px;
+}
+.icon {
+    color: var(--primary-color); 
+    width: 2rem;
+    height:2rem;
+  }
+  .half-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: var(--hover);
+    border-radius: 0 0 0 100%;
+    transition: background-color 1s;
+    z-index: 1;
+    
+  }
+  .serviseGrid:hover{
+    background-color:var(--primary-color);
+    border-radius: 25px;
+  }
+  .serviseGrid:hover .half-circle {
+    background-color:var(--primary-color);
+   
+  }
+  
+  .serviseGrid:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    border-radius: 25px;
+    transform: scale(1);
+    transition: background-color 1s;
+  }
+
+  .servisesDetails {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 40px;
+    width: 90%;
+    height: 60%;
+    /* position: relative; */
+    margin: 0 auto;
+    margin-top: 12%;
+  }
+  
+  .servisesDetails .itemdetails {
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .servisesDetails .itemdetails,
+  .servisesDetails .itemdetails .image-container {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .servisesDetails .itemdetails .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  
+  .servisesDetails .text-container {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    width: 90%;
+    height: 50%;
+    border-radius: 25px;
+    background-color:rgba(255, 255, 255, 0.693);
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+ .text-container:hover {
+background-color: var(--primary-color);
+  }
+
+  .text-container h2,
+  .text-container p {
+    margin: 0;
+  }
+  
+  .text-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+    text-align: start;
+  }
+  .more{
+    text-align: start;
+    width: 100%;
+  }
+
+  @media 
+  (max-width:950px) {
+    .containerServises {
+      height: 400vh;
+    }
+  
+    .servisesGrid {
+      position: relative;
+      margin-top: 5%;
+      height: 25%;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      text-align: start;
+      gap: 15px;
+    }
+  
+    .servisesGrid .servisesGrid {
+      width: 100%;
+    }
+  
+    .servisesDetails {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+      gap: 20px;
+      width: 80%;
+      height: 20%;
+      /* position: relative; */
+      margin: 0 auto;
+      margin-top: 8%;
+    }
+  
+    .servisesDetails .itemdetails {
+          height: 500px;
+    }
+  
+    .image-container {
+      height: 100%;
+    }
+    .text-container{
+      width: 80%;
+      height: 250px;
+    }
+  }
+
+  @media 
+  (max-width:570px) {
+    .servisesDetails{
+      font-size: 10px;
+    }
+    .servisesDetails {
+      height: 20%;
+      margin-bottom: 5%;
+    }
+    .servisesDetails .text-container {
+      top: 45px;
+      width: 90%;
+      height: 70%;}
+
+      .servisesGrid{
+        height: 25%;
+        grid-template-columns: repeat(1,minmax(200px, 1fr));
+        text-align: start;
+        gap: 15px;
+        
+      } 
+      .servisesDetails .itemdetails {
+          height: 350px;
+          margin-bottom: 50px;
+      }
+      .text-container{
+        width: 80%;
+        height: 200px;
+      }
+
+  }
