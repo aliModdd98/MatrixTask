@@ -1,43 +1,45 @@
-.footerContainer{
+.footerContainer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkFooter {
+  padding-right: 20px;
+}
+.linkFooter:hover {
+  color: var(--primary-color);
+}
+.leftFooter {
+  width: 25%;
+}
+.rightFooter {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bootstrap {
+  color: var(--primary-color);
+}
+.bootstrap:hover {
+  cursor: pointer;
+}
+@media (max-width: 950px) {
+  .footerContainer {
     width: 100%;
     height: 30vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-}
-
-.linkFooter{
-    padding-right: 20px;
-}
-.linkFooter:hover{
-    color: var(--primary-color);
-}
-.leftFooter {
-    width: 25%;
-   
-}
-.rightFooter{
-    width: 35%;
-}
-.bootstrap{
-    color: var(--primary-color);
-}
-.bootstrap:hover{
-    cursor: pointer;
-}
-@media (max-width:950px) {
-    .footerContainer{
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }   
-    .leftFooter,.rightFooter {
-        width: 60%;
-       
-    }
+  }
+  .leftFooter,
+  .rightFooter {
+    width: 90%;
+  }
 }
