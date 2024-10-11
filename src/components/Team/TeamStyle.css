@@ -1,108 +1,80 @@
-.teamContainer{
-    height: 100vh;
-    width: 100%;
-    background-color: #0dcaf005;
+.teamContainer {
+  height: auto;
+  width: 100%;
+  background-color: #0dcaf005;
+  margin: 0 auto;
 }
-.socials{
-    display: none;
-}
-.cardsTeam{
-    margin: 0 auto;
-    margin-top: 4%;
-    width: 90%;
-    height: 75%;
-    display: grid;
-    grid-template-columns: repeat(4,minmax(200px,1fr));
-    gap: 20px;
 
+.socials {
+  display: none;
 }
-.descT{
-    padding-top:15%;
+
+.cardsTeam {
+  margin: 0 auto;
+  margin-top: 4%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px;
+  padding: 1rem;
 }
-.descT .role{
-    color: var(--gray);
-    font-size: 13px;
+
+.cardT {
+  width: 300px; /* Default card width */
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
-.cardT{
-    height: 80%;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+.cardT:hover .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 80%;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.674);
 }
-.cardT:hover .socials{
-    display: flex;
-    flex-direction: row ;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 80%;
-    width: 100%;
-    height: 20%;
-    background-color: rgba(255, 255, 255, 0.674);
-    
- }
-.imgT img{
-    width: 100%;
-    height: 100%;
+
+.imgT img {
+  width: 100%;
+  height: 100%;
 }
-.imgT{
-    position: relative;
+
+.imgT {
+  position: relative;
+}
+
+.descT {
+  color: black;
+  padding: 0.8rem 0.5rem;
+}
+
+.descT .role {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.iconT {
+  width: 35px;
+  height: 35px;
+  color: black;
+}
+
+@media (max-width: 950px) {
+  .cardT {
+    width: 45%; /* Adjust width for mid-size screens */
   }
-.descT{
-   
-    color: black;
 }
-.iconT{
-    width: 35px;
-    height: 35px;
-    color: black;
-}
-@media(max-width:950px){
-    .teamContainer{
-        height: 210vh;
-    }
-    .cardsTeam{
-        margin: 0 auto;
-        margin-top: 4%;
-        width: 90%;
-        height: 75%;
-        display: grid;
-        grid-template-columns: repeat(2,minmax(200px,1fr));
-        gap: 20px;
-    
-    }
-    
-.cardT{
-    height: 90%;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-}
-@media (max-width:450px){
-    .teamContainer{
-       height:350vh;
-    }
-    .cardsTeam{
-        margin: 0 auto;
-        margin-top: 4%;
-        width: 90%;
-        height: 75%;
-        display: grid;
-        grid-template-columns: repeat(1,minmax(200px,1fr));
-        gap: 20px;
-    
-    }
-       
-.cardT{
-    height: 100%;
-    width: 90%;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
+
+@media (max-width: 450px) {
+  .cardT {
+    width: 100%; /* Full width on small screens */
+  }
 }

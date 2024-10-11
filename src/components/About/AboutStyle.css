@@ -1,150 +1,170 @@
-
- .Line{
-    width: 60px;
-    height: 1px;
-    border: 2px solid var(--primary-color);
+.Line {
+  width: 60px;
+  height: 1px;
+  border: 2px solid var(--primary-color);
 }
- .titlePage{
-    margin-top: 2%;
-    width: 100%;
-    height: 10vh;
-    flex-direction: row;
-   text-align: center;
-   display: flex;
- align-items: center;
- justify-content: center;
+.mrgTitle {
+  margin-top: 2rem;
 }
- .titlePage h2{
-    margin: 0 10px;
-    color: black;
-    font-size: 42px;
+.titlePage {
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sectionsAbout{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    width: 100%;
-    height: 40%;
-    margin-top: 3%;
+.titlePage h2 {
+  margin: 0 10px;
+  color: black;
+  font-size: 42px;
+}
+.sectionsAbout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  width: 100%;
+  height: 40%;
+  margin-top: 3%;
 }
 .sectionsAbout .leftAbout,
-.sectionsAbout .rightAbout{
-      padding: 1rem;
-      text-align: start;
+.sectionsAbout .rightAbout {
+  padding: 1rem;
+  text-align: start;
 }
-.sectionsAbout .leftAbout .titleAbout{
-    margin-bottom: 30px;
+.sectionsAbout .leftAbout .titleAbout {
+  margin-bottom: 30px;
 }
-.sectionsAbout .leftAbout .titleAbout .item{
-    display: inline-block;
+.sectionsAbout .leftAbout .titleAbout .item {
+  display: inline-block;
 }
-.sectionsAbout .leftAbout .titleAbout .item:first-child{
-    display: inline-flex;
-    color: var(--primary-color);
+.sectionsAbout .leftAbout .titleAbout .item:first-child {
+  display: inline-flex;
+  color: var(--primary-color);
 }
-.leftAbout{
-    margin: 0 2rem;
+.leftAbout {
+  margin: 0 2rem;
 }
 .item .icon {
-    color: var(--primary-color); 
-    width: 2rem;
-    height:2rem;
-  }
-  .item .sizeIcon{
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  .btnTransparents button{
-    margin-top: 35px;
-    width: 150px;
-    padding: 10px 2rem;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    border-radius: 25px;
-  }
-  .btnTransparents button:hover{
-    background-color: var(--hover);
-  }
-  .leftAbout .imgStyle img{
-    width: 100%;
-    height: 100%;
-  }
-  .gridItems{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    gap: 40px;
-  }
-  .gridItems .titleGrid{
+  color: var(--primary-color);
+  width: 2rem;
+  height: 2rem;
+}
+.item .sizeIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.btnTransparents button {
+  margin-top: 35px;
+  width: 150px;
+  padding: 10px 2rem;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 25px;
+}
+.btnTransparents button:hover {
+  background-color: var(--hover);
+}
+.leftAbout .imgStyle img {
+  width: 100%;
+  height: 100%;
+}
+.gridItems {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 40px;
+}
+.gridItems .titleGrid {
+  display: flex;
+  flex-direction: row;
+}
+.num {
+  font-weight: bold;
+  font-size: 36px;
+  margin-left: 1.5rem;
+  color: black;
+}
+.descGrid {
+  font-size: 16px;
+  color: var(--gray);
+}
+.gridItems .descGrid span {
+  font-weight: bold;
+}
 
-    display: flex;
-    flex-direction: row;
-  }
-  .num{
-    font-weight: bold;
-    font-size: 36px;
-    margin-left: 1.5rem;
-    color: black;
-  }
-  .descGrid{
-    font-size: 16px;
-    color: var(--gray);
-  }
-  .gridItems .descGrid span{
-       font-weight: bold;
-  }
+.animated {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  font-weight: bold;
+  font-size: 40px;
+}
 
-  .animated {
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-    font-weight: bold;
-    font-size: 40px;
-  }
-  
-  .animated.active {
-    opacity: 1;
-  }
-  .contentStyle{
-    margin: 0 auto;
-  }
+.animated.active {
+  opacity: 1;
+}
+.contentStyle {
+  margin: 0 auto;
+}
 
-  @media (max-width:780px) {
-   
-   .aboutContainer{
-    height: 180vh;
-   }
-   .aboutContainer .titlePage{
+@media (max-width: 780px) {
+  .aboutContainer {
+    height: auto;
+    padding: 2rem;
+  }
+  .aboutContainer .titlePage {
     margin: 0;
-   }
-    .sectionsAbout{
-      display: grid;
-      grid-template-columns: repeat(1, minmax(100px, 1fr));
-      width: 80%;
-      height: 40%;
-      margin: 0 auto;
-      margin-top: 0;
-      margin-bottom: 5%;
-      font-size: 14px;
+  }
+  .sectionsAbout {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 5%;
+    font-size: 14px;
   }
   .leftAbout {
     height: 70%;
     padding-top: 2%;
   }
-  .leftAbout .imgStyle img{
+  .leftAbout .imgStyle img {
     height: 100%;
     width: 90%;
     padding-top: 2%;
   }
-  .leftAbout .Section{
-    height:50% ;
+  .leftAbout .Section {
+    height: 50%;
   }
-  .rightAbout{
+  .rightAbout {
     width: 90%;
     height: 50%;
   }
 
-  .gridItems{
+  .gridItems {
     font-size: 14px;
+  }
+  .titlePage h2 {
+    font-size: 32px;
+  }
+
+  .titlePage {
+    height: auto;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .Line {
+    width: 40px;
+    border: 1px solid var(--primary-color);
+  }
+
+  .contentStyle {
+    font-size: 16px;
+    width: 80%;
   }
   /* .leftAbout .imgStyle img,.gridItems{
     width: 80%;
@@ -153,26 +173,47 @@
     margin-bottom: 2%;
     
   } */
+}
+
+@media (max-width: 450px) {
+  .aboutContainer {
+    height: 222vh;
+  }
+  .sectionsAbout {
+    height: 30%;
   }
 
-  @media(max-width:450px){
-    .aboutContainer{
-      height: 222vh;
-     }
-     .sectionsAbout{
-      height: 30%;
-     }
-     
   .leftAbout {
     height: 60%;
     padding-top: 2%;
   }
-    .sectionsAbout{
-      height: 50%;
-
-    }
-   .rightAbout{
+  .sectionsAbout {
+    height: 50%;
+  }
+  .rightAbout {
     font-size: 12px;
     width: 100%;
-   }
   }
+  .titlePage h2 {
+    font-size: 24px;
+  }
+
+  .Line {
+    width: 30px;
+  }
+
+  .mrgTitle {
+    margin-top: 1rem;
+  }
+
+  .contentStyle {
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+  .sectionsAbout {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+  }
+}

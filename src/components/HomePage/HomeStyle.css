@@ -1,176 +1,169 @@
-.container{
-    width: 100%;
-    height: 100vh;
+.container {
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
- 
 }
-.container .sectionsHome{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50%;
-    width: 100%;
-    margin-top: 80px;
-   
+.container .sectionsHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* height: 50%; */
+  width: 100%;
+  margin-top: 80px;
 }
-.sectionsHome .right{
-    justify-content: space-evenly;
+.sectionsHome .right {
+  justify-content: space-evenly;
 }
 .sectionsHome .left {
-    justify-content: center;
-    text-align: start;
-    padding: 10px;
-   
+  justify-content: center;
+  text-align: start;
+  padding: 10px;
 }
-.sectionsHome .left h2{
-    font-weight: bold;
-    font-size: 40px;
-    color: black;
-    margin: 3px 2rem;
+.sectionsHome .left h2 {
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+  margin: 3px 2rem;
 }
-.sectionsHome .left p{
-    margin: 10px 2rem;
-    font-size: 20px;
-    color: var(--gray);
+.sectionsHome .left p {
+  margin: 10px 2rem;
+  font-size: 20px;
+  color: var(--gray);
 }
-.sectionsHome .left ,
-.sectionsHome .right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 30px;
-    width: 50%;
+.sectionsHome .left,
+.sectionsHome .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  width: 50%;
 }
-.sectionsHome .right img{
-   
-    width: 500px;
-    height: 450px;
+.sectionsHome .right img {
+  width: 500px;
+  height: 450px;
 }
 
 .sectionsHome .btnTransparent {
-    width: 100%;
-    color: var(--hover);
+  width: 100%;
+  color: var(--hover);
 }
-.sectionsHome .btnTransparent button{
-    margin: 3px 2rem;
-    padding: 10px 2rem;
-    border-radius: 15px;
-    border: 2px solid var(--primary-color);
-    display: flex;
-    columns: var(--primary-color);
-}
-
-.sectionsHome .btnTransparent :hover{
-    background-color: var(--hover);
-    color: white;
-}
- .brands{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 20px; 
-    width: 100%;
-    margin: 0 auto;
-    background-color: #0d6dfd2e;
-    margin-top: 14%;
-   /* padding: 0rem 2rem; */
-
+.sectionsHome .btnTransparent button {
+  margin: 3px 2rem;
+  padding: 10px 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--primary-color);
+  display: flex;
+  columns: var(--primary-color);
 }
 
-.brands .brandImg img{
-    width: 90%;
-  height: 90%;
-    filter: grayscale(100%);
-    padding-top:10px ;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.sectionsHome .btnTransparent :hover {
+  background-color: var(--hover);
+  color: white;
 }
-.brands .brandImg img:hover{
-    filter: grayscale(0%);
+.brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  /* height: auto; */
+  /* margin: 0 auto; */
+  background-color: #0d6dfd2e;
+  /* margin-top: 14%; */
+  padding: 1rem 2rem;
+}
+.brandImg {
+  /* Allows the items to shrink and wrap */
+  max-width: 120px;
+  text-align: center; /* Centers the image in each brand container */
+  margin-bottom: 10px;
+  margin-right: 0.8rem;
+}
+.brands .brandImg img {
+  flex: 1 1 100px;
+  max-width: 120px;
+  width: 100%;
+  /* height: 90%; */
+  filter: grayscale(100%);
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0.8rem;
+  /* padding-left: 1rem; */
+  /* padding-right: 1rem; */
+}
+.brands .brandImg img:hover {
+  filter: grayscale(0%);
 }
 .animationImg {
-    animation: farmerMotion 1.2s infinite alternate;
-  }
-  
-  @keyframes farmerMotion {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(10px);
-    }
-  }
- 
+  width: 100%;
+  animation: farmerMotion 1.2s infinite alternate;
+}
 
+@keyframes farmerMotion {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 
-  @media (max-width:920px) {
-    .container{
-        height: 130vh;
-    } 
-.container .sectionsHome{
-   margin: 0 auto;
+@media (max-width: 920px) {
+  .container {
+    height: auto;
+  }
+  .container .sectionsHome {
+    margin: 0 auto;
     flex-direction: column-reverse;
     justify-content: center;
-  align-items: center;
-  margin-top: 19%;
-  width: 90%;
-  height: 60%;
-   
-}
-.sectionsHome .right{
+    align-items: center;
+    margin-top: 19%;
+    width: 90%;
+    height: 60%;
+  }
+  .sectionsHome .right {
     width: 90%;
     margin-bottom: 10%;
-}
-.sectionsHome .left{
+  }
+  .sectionsHome .left {
     width: 90%;
     height: 40%;
-}
+  }
 
-.sectionsHome .right img{
-   
+  .sectionsHome .right img {
     width: 90%;
     height: 90%;
-}
-.brands{
-    margin-top: 4%;
-    grid-template-columns: repeat(3, minmax(100px, 220px));
-    grid-gap: 20px;
-    margin-bottom: 4%;
-    width: 100%;
-    height: 15%;
-}
-.brands .brandImg{
-    height: 60%;
-    width: 70%;
-    margin: 0 auto;
-}
-    
-
   }
-  @media (max-width:450px) {
-     .container{
-        height: 140vh;
-     }
-    .sectionsHome .right img{
-        margin: 0 auto;
-        width: 90%;
-        height: 90%;
-        margin-top: 15%;
-    }
-    /* .sectionsHome .right img{
+  .animationImg {
+    max-width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    height: auto;
+  }
+  .sectionsHome .right img {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    margin-top: 15%;
+  }
+  /* .sectionsHome .right img{
         width: 90%;
         margin-bottom: 10%;
     } */
-    .sectionsHome .right
-    .sectionsHome .left{
-       margin-top: 7%;
-        width: 90%;
-        height: 40%;
-    }
-.brands{
-   grid-template-columns: repeat(2, minmax(80px, 150px));
-    grid-gap: 10px;
-   width: 90%;
-
-}
-    
+  .sectionsHome .right .sectionsHome .left {
+    margin-top: 7%;
+    width: 90%;
+    height: 40%;
   }
+}
+@media (max-width: 768px) {
+  .brands {
+    justify-content: center; /* Centers the brands on smaller screens */
+  }
+
+  .brandImg {
+    flex: 1 1 80px; /* Adjusts the size for smaller screens */
+  }
+}
